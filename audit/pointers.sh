@@ -35,7 +35,7 @@ set -u
 
 # The six deliverables, from the single shared manifest (round 8: FILES= folded).
 SOURCES=$(tr '\n' ' ' < audit/sources.txt)
-DOCS="PROOFS.md HANDOFF.md REGISTER.md"
+DOCS="PROOFS.md HANDOFF.md REGISTER.md README.md VERIFY.md"
 WORK=/tmp/wsl_pointers_$$
 mkdir -p "$WORK"
 
@@ -86,6 +86,7 @@ find . -type f -exec basename {} \; | sort -u >> "$WORK/files.txt"
 # instrument's own honest boundary: everything on it is unchecked by design,
 # so it is kept short and each entry is justified.
 cat > "$WORK/externals.txt" <<'EXT'
+cmd.exe
 Classical.choice
 Quot.sound
 Nat.le_refl

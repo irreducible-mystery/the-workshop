@@ -118,11 +118,11 @@ load-bearing**, given only so you are not surprised by the long ones:
 
 | file | ~time | .olean size |
 |---|---|---|
-| `Interchange.lean` | 3–7 s | 305 KB |
-| `MagicSquare.lean` | 60–110 s | 14.8 MB |
-| `Anyon.lean` | 100–165 s | 14.1 MB |
-| `Exchangeable.lean` | 13–19 s | 828 KB |
-| `Rigidity.lean` | 120–155 s | 5.0 MB |
+| `Interchange.lean` | "2–7 s" | "305 KB" |
+| `MagicSquare.lean` | "55–110 s" | "14.8 MB" |
+| `Anyon.lean` | "100–165 s" | "14.1 MB" |
+| `Exchangeable.lean` | "13–19 s" | "828 KB" |
+| `Rigidity.lean` | "120–155 s" | "5.0 MB" |
 | `Verlinde.lean` | 6–14 s | 2.8 MB |
 
 Expect roughly five to seven minutes total. The reference `.olean` SHA-256s are

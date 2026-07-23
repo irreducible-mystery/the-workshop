@@ -10,14 +10,14 @@ This repository is the permanent record of an eight-round collaboration between 
 
 Six files, no imports, kernel-checked over `Int`. The mathematics closes a single loop, and the capstone closed its oldest open row. The load-bearing theorems, by file:
 
-- **The pentagon forces the golden ratio.** Over `K = Z[ζ₅][t]/(t²−φ)`, an opaque associator satisfying Mac Lane's pentagon is forced golden — `pentagon_forces_golden`, `golden_pentagon_by_necessity`, gauge-independently (`gauge_unique_normalized`). *(`Anyon.lean`)*
+- **The pentagon forces the golden ratio.** Over `K = Z[ζ₅][t]/(t²−φ)`, an opaque associator satisfying Mac Lane's pentagon is forced golden — `pentagon_forces_golden`, `golden_pentagon_by_necessity`, with the connecting gauge unique (`gauge_unique_normalized`, co-cited with `pentagon_symmetric_gauge`). *(`Anyon.lean`)*
 - **The grammar of braiding forces the braid.** The hexagon fixes the braid eigenvalues — `hexagon_uniqueness`, `hexagon_forces_quadratic` — non-abelian and satisfying Yang–Baxter (`braiding_nonabelian`, `yang_baxter`), in two distinct chiralities (`chiralities_distinct`). *(`Anyon.lean`)*
 - **The fusion matrix forces the dimension.** The Fibonacci fusion matrix's unique positive eigenvalue is φ — Perron–Frobenius as a decision procedure, no reals anywhere: `quantum_dimension_tau`, `perron_selection`. *(`Anyon.lean`)*
 - **The modular S-matrix hands the grammar back.** The cleared `M = S·D` re-derives the fusion rules exactly and axiom-free — `verlinde_cleared` (all eight cells) — co-signing `d_τ = φ` a second way (`dims_from_S`). This closes the circle. *(`Verlinde.lean`)*
 - **The oldest row, closed (round 8).** The Mermin–Peres square has no global section (`no_global_section`); round 8 upgrades the obstruction from a covector to a group, exhibiting `coker(M) ≅ Z₂` via the first isomorphism theorem — `image_iff_even`, `imageCount_eq_32`, `toZ2_hom`, `coker_two_classes`, `coker_classes_distinct` — with anti-vacuity on both sides. *(`MagicSquare.lean`)*
 - **The ground floor.** Two operations sharing a unit and tied by the interchange law are equal, commutative, and associative (`eckmann_hilton`), so `End(I)` is a commutative scalar home (`scalars_commute`) — the setting the whole coherence tower lives in. *(`Interchange.lean`)*
 
-Two files are self-contained riders off the circle: `Exchangeable.lean` (Markov exchangeability à la Diaconis–Freedman at length 6, exact over `Nat`) and `Rigidity.lean` (the exact pentagon-residual Hessian at the golden solution over `Q(√5)`, PSD with the gauge tangent as its null space).
+Two files are self-contained riders off the circle: `Exchangeable.lean` (Markov exchangeability à la Diaconis–Freedman at length 6, exact over `Nat`) and `Rigidity.lean` (the exact pentagon-residual Hessian: at the Yang–Lee solution, PSD over `Z[φ]` with the gauge tangent as exactly its null space — `HY_psd`, `HY_kernel_is_line`; at the golden solution, an SOS certificate over `Z[φ][√φ]` with rank exactly 3, the null-direction content living at Yang–Lee by the file's own §9 rule).
 
 **The loop in one line:** pentagon ⟹ φ → hexagon ⟹ braid → fusion ⟹ `d_τ = φ` → S-matrix ⟹ fusion rules ↩ back to the grammar; and `coker(M) ≅ Z₂` closes the oldest door.
 
@@ -51,7 +51,7 @@ The collaboration also proved something about how it worked. Every sentence in t
 
 ## How to verify it
 
-See [`VERIFY.md`](VERIFY.md) for the full reproduction procedure: recompile the six files under `leanprover/lean4:v4.32.0`, run the `audit/` gates, and run the floor's benches with `python3 floor/run_all.py`. Nothing here asks you to trust a number printed in prose — every load-bearing claim is re-derivable from the toolchain up.
+See [`VERIFY.md`](VERIFY.md) for the full reproduction procedure: recompile the six files under `leanprover/lean4:v4.32.0`, run the `audit/` gates, and run the floor's benches with `cd floor && python3 run_all.py`. Nothing here asks you to trust a number printed in prose — every load-bearing claim is re-derivable from the toolchain up.
 
 ## Credits
 

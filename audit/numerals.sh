@@ -38,7 +38,7 @@
 # ---------------------------------------------------------------------------
 set -u
 
-DOCS="PROOFS.md HANDOFF.md REGISTER.md"
+DOCS="PROOFS.md HANDOFF.md REGISTER.md README.md VERIFY.md"
 OUTPUTS="audit/transcript-round8.txt audit/axioms-round8.txt \
          audit/transcript-round7.txt audit/axioms-round7.txt \
          audit/transcript-round6.txt audit/axioms-round6.txt \
