@@ -1,0 +1,6 @@
+# Derived / build artifacts — the repo is source, verified from a bare kernel.
+*.olean
+*.zip
+__pycache__/
+*.pyc
+.DS_Store

@@ -1,0 +1,61 @@
+# NAMES THE PROSE MENTIONS BUT DOES NOT USE.
+#
+# audit/pointers.sh treats a backticked identifier as a claim that the thing
+# exists.  Some prose is *about* names rather than using them: a phantom being
+# reported, a superseded name being recorded, an artifact in the builder's
+# crate rather than this one.  Those go here, WITH A REASON, so the exemption
+# is visible and reviewable instead of buried in the script.
+#
+# The rule for adding a line: the sentence must be discussing the name, not
+# relying on it.  If you find yourself adding a name so a claim will pass,
+# that is the defect the instrument exists to catch -- fix the claim instead.
+#
+# format:  <name>  # <reason>
+
+# -- phantoms, quoted in the corrections that report them ---------------------
+# ONLY names the LEDGER PROSE genuinely discusses go here -- a name the prose is
+# ABOUT, not a name it relies on.  THE ONE RULE THE BUILDER TAUGHT (G1, round 7):
+# a name that is ALSO the documented FALSIFIER must NOT double as an exemption,
+# because exempting it kills the very test the ledger cites.  Round 6 did
+# exactly that: it named `totally_made_up_theorem_name` as "plant this and the
+# resolver fires" AND exempted it, so the offered falsifier passed.  The repair
+# is NOT to un-exempt a name the ledger discusses -- it is to make the LIVE
+# falsifier a fresh string that is on NO list, tested but never written into
+# the ledger.  So `totally_made_up_theorem_name` stays exempt (the G1
+# correction discusses it), and the documented test now uses a fresh unlisted
+# name instead.
+exactly_two_of_domain            # F1: scratch name that never became a theorem;
+                                 #     the F1 correction discusses it by name
+totally_made_up_theorem_name     # G1: discussed in the round-7 correction ABOUT
+                                 #     the falsifier -- NOT itself the falsifier
+                                 #     any more (that is now a fresh unlisted name)
+
+# -- superseded names, quoted as history --------------------------------------
+sepPar_noncommutative            # -> sepPar_not_comm            (C3', round 3)
+sepPar_has_no_unit               # -> sepPar_no_left_unit        (C3', round 3)
+Nswap_perron_is_one              # -> Nswap_has_positive_eigenvalue_one (N3, r5)
+
+# -- artifacts CITED AS ABSENT, not relied on (round 7) -----------------------
+# The prose NAMES these to say they are NOT here -- the stowaway that was
+# removed, and the two Python gifts that did not arrive this round.  Discussing
+# a name's absence is not relying on it (the quoted-names rule); a name that the
+# ledger asserts is GONE must not be resolvable as PRESENT, so it is exempt.
+PROOFS.md.bak                    # the removed stowaway; G-note names it as fixed
+r7_numeral_gift.py               # builder's numeral gift -- did not arrive; the
+                                 #   ledger says so and ships a shell instrument
+r7_gift_verlinde.py              # builder's Verlinde gift -- did not arrive;
+                                 #   named only to record its absence
+
+# -- artifacts in the BUILDER's crate, not this one ---------------------------
+r6_gift_hessian.py               # builder certificate, round 6
+V2.hessian_is_2JtJ_golden        # section of that certificate
+V3a.entry_fields_golden          # section of that certificate
+V3e.swap_symmetry                # section of that certificate
+r3_magicsquare_ledger.py         # builder instrument, round 3
+
+# -- Rng field projections written with a bound-variable prefix ---------------
+K.zero                           # `K : Rng R` field access in prose; Rng.zero
+K.mul                            # ditto
+K.add                            # ditto
+K.neg                            # ditto
+K.beq                            # ditto

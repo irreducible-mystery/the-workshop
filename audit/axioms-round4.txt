@@ -1,0 +1,34 @@
+==============================================================
+ AXIOM CENSUS -- #print axioms on every theorem
+ toolchain: leanprover/lean4:v4.32.0   Lean (version 4.32.0, x86_64-w64-windows-gnu, commit 8c9756b28d64dab099da31a4c09229a9e6a2ef35, Release)
+--------------------------------------------------------------
+ WHAT THIS COLUMN MEANS (round 4, at the builder's request):
+ the axioms of the #print axioms closure, STATEMENT INCLUDED --
+ a toolchain-relative OVER-APPROXIMATION of logical dependence.
+ A theorem may be derivable axiom-free and still report propext
+ here, because a definition named in its statement carries one.
+ This census measures the first thing, not the second.
+==============================================================
+
+file             theorems   axiom-free       rest
+----             --------   ----------       ----
+Interchange           21           21          0
+MagicSquare           63           16         47
+Anyon                565          250        315
+Exchangeable          41           41          0
+TOTAL                690          328        362
+
+axiom sets actually occurring:
+  Anyon            [propext]                    19
+  MagicSquare      [propext, Quot.sound]        2
+  MagicSquare      [propext]                    45
+  Anyon            [Quot.sound]                 8
+  Anyon            [propext, Quot.sound]        288
+
+THE TWO THAT MATTER:
+  sorryAx           0   (must be 0 -- this is the authoritative
+                        gap check; a `sorry` in any proof term
+                        appears here and cannot be hidden)
+  Classical.choice  0   (must be 0 -- the files are constructive)
+
+raw output kept in: /tmp/wsl_axioms_220/raw.txt

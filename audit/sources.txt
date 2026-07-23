@@ -1,0 +1,6 @@
+Interchange.lean
+MagicSquare.lean
+Anyon.lean
+Exchangeable.lean
+Rigidity.lean
+Verlinde.lean

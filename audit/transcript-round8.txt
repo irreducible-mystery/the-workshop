@@ -1,0 +1,83 @@
+==============================================================
+ THE WORKSHOP -> LEAN : COMPILE TRANSCRIPT
+==============================================================
+date        : 2026-07-23T12:41:50Z (UTC)
+host os     : MINGW64_NT-10.0-26200 3.6.9-b4195d69.x86_64 x86_64
+toolchain   : leanprover/lean4:v4.32.0
+lean        : Lean (version 4.32.0, x86_64-w64-windows-gnu, commit 8c9756b28d64dab099da31a4c09229a9e6a2ef35, Release)
+
+--------------------------------------------------------------
+ SOURCES MEASURED (E5(ii): every view names what it viewed)
+--------------------------------------------------------------
+   Interchange.lean     81feebe2b00b5162d17b07fb5577c77c4416e377a649279cc65bebdff9126e39
+   MagicSquare.lean     7960b8020bb68fa4ba0ca831f550a6a1d55482faef7a6104950487839b852b9f
+   Anyon.lean           bf08795ba09c66f486e7dcdf337cc3a5d20b6b85e72cce093300c32639993d8e
+   Exchangeable.lean    c7d845b5e14e4d2afcceb35ccd88022609c000617dd3af859334f326f4f4f50f
+   Rigidity.lean        89f65cc6559f472278dd3886ca87b9063f76cd5110fe631c051ac5474d7dd944
+   Verlinde.lean        cf04711c97f7155ffca78f6247162a2030c5d69ee11a1df02c7700b0a75b7ff2
+   lean-toolchain       cc346fd7850a83fb7af3902dfc378f74d8eb8c59c6d34322488269ebfe7615b1
+
+--------------------------------------------------------------
+ per-file: exit code, wall time, output bytes, .olean sha256
+--------------------------------------------------------------
+Interchange.lean   exit=0     2646 ms  stdout+stderr=0 bytes  olean=304712 bytes
+                   sha256(olean) = 7439cf99f388d3b266c875a70ba8d7c69e20e2d28b2d0234736d54f87a23b5fc
+
+MagicSquare.lean   exit=0    59290 ms  stdout+stderr=0 bytes  olean=14812432 bytes
+                   sha256(olean) = 1795de3e312c74d4473497a26c996fb43ae4df99073f5310bb97777ba66929b6
+
+Anyon.lean         exit=0   118973 ms  stdout+stderr=0 bytes  olean=14116328 bytes
+                   sha256(olean) = 8f70db995cf85c7ba408aacd754d435424e01783df5fd321d93b295c2fdd68d2
+
+Exchangeable.lean  exit=0    18892 ms  stdout+stderr=0 bytes  olean=828248 bytes
+                   sha256(olean) = a402def5655570cefa197fe9b939beae84f87ec30571172de42c7864a6085330
+
+Rigidity.lean      exit=0   136098 ms  stdout+stderr=0 bytes  olean=5037200 bytes
+                   sha256(olean) = 503caafcd66d1e788cab24d4d00fade0ed69dca744af43cfeaf2fa59561f10f5
+
+Verlinde.lean      exit=0     9440 ms  stdout+stderr=0 bytes  olean=2766400 bytes
+                   sha256(olean) = a14dff81a350d04719d95ad2140850b7fd89ce46c2a0d3bc2eb69f222f4474e7
+
+--------------------------------------------------------------
+ hygiene sweep
+--------------------------------------------------------------
+  sorry            10 textual occurrence(s)
+      Interchange.lean:35:  Status: PROVED, no `sorry`.
+      MagicSquare.lean:21:  Status: PROVED, no `sorry`.  Theorem A is proved twice, independently:
+      Anyon.lean:10:  `sorry`, no mathlib.
+      Anyon.lean:37:  Status: PROVED throughout, no `sorry`, no unmarked gap.
+      Anyon.lean:4632:    Lean, not a Lean theorem.  It is a Lean theorem now, with no `sorry`, no
+      Exchangeable.lean:31:  Self-contained: NO imports.  No `sorry`, no `native_decide`, no `axiom`, no
+      Rigidity.lean:10:  Self-contained: NO imports.  No `sorry`, no `native_decide`, no mathlib, no
+      Rigidity.lean:2758:    else — in particular `Classical.choice` or `sorryAx` — is a failure.
+      Rigidity.lean:2776:    and never `Classical.choice` or `sorryAx`.  The `Classical.choice` trap
+      Verlinde.lean:7:  Self-contained: NO imports.  No `sorry`, no `native_decide`, no mathlib, no
+  native_decide    7 textual occurrence(s)
+      Interchange.lean:27:  case-split).  No `simp`, no `omega`, no `native_decide`.
+      MagicSquare.lean:17:  `native_decide`.  (An earlier header listed only the round-1 tactics
+      Anyon.lean:9:  Lean kernel on `Int`.  No floats, no rationals, no `native_decide`, no
+      Anyon.lean:4633:    `native_decide`, and no raised budget. -/
+      Exchangeable.lean:31:  Self-contained: NO imports.  No `sorry`, no `native_decide`, no `axiom`, no
+      Rigidity.lean:10:  Self-contained: NO imports.  No `sorry`, no `native_decide`, no mathlib, no
+      Verlinde.lean:7:  Self-contained: NO imports.  No `sorry`, no `native_decide`, no mathlib, no
+  maxHeartbeats    1 textual occurrence(s)
+      Rigidity.lean:12:  Lean kernel on `Int`.  No budget (`maxHeartbeats`, `maxRecDepth`, simp
+  maxRecDepth      1 textual occurrence(s)
+      Rigidity.lean:12:  Lean kernel on `Int`.  No budget (`maxHeartbeats`, `maxRecDepth`, simp
+  partial def      0 textual occurrence(s)
+  ^axiom           0  (must be 0)
+  ^import          0  (must be 0)
+
+--------------------------------------------------------------
+ theorem counts
+--------------------------------------------------------------
+  Interchange.lean      21
+  MagicSquare.lean      85
+  Anyon.lean           714
+  Exchangeable.lean     41
+  Rigidity.lean        214
+  Verlinde.lean         75
+  TOTAL                1150
+
+RESULT: all files compiled silent (exit 0, zero bytes).  PASS.
+artifacts kept in: /tmp/wsl_transcript_11280

@@ -1,0 +1,52 @@
+==============================================================
+ AXIOM CENSUS -- #print axioms on every theorem
+ toolchain: leanprover/lean4:v4.32.0   Lean (version 4.32.0, x86_64-w64-windows-gnu, commit 8c9756b28d64dab099da31a4c09229a9e6a2ef35, Release)
+--------------------------------------------------------------
+ WHAT THIS COLUMN MEANS (round 4, at the builder's request):
+ the axioms of the #print axioms closure, STATEMENT INCLUDED --
+ a toolchain-relative OVER-APPROXIMATION of logical dependence.
+ A theorem may be derivable axiom-free and still report propext
+ here, because a definition named in its statement carries one.
+ This census measures the first thing, not the second.
+--------------------------------------------------------------
+ SOURCES MEASURED (E5(ii): every view names what it viewed).
+ Without these, an output is faithfully rendered and
+ unverifiably relevant -- D5's lesson one level up.
+   Interchange.lean     81feebe2b00b5162d17b07fb5577c77c4416e377a649279cc65bebdff9126e39
+   MagicSquare.lean     7960b8020bb68fa4ba0ca831f550a6a1d55482faef7a6104950487839b852b9f
+   Anyon.lean           bf08795ba09c66f486e7dcdf337cc3a5d20b6b85e72cce093300c32639993d8e
+   Exchangeable.lean    c7d845b5e14e4d2afcceb35ccd88022609c000617dd3af859334f326f4f4f50f
+   Rigidity.lean        89f65cc6559f472278dd3886ca87b9063f76cd5110fe631c051ac5474d7dd944
+   Verlinde.lean        cf04711c97f7155ffca78f6247162a2030c5d69ee11a1df02c7700b0a75b7ff2
+   lean-toolchain       cc346fd7850a83fb7af3902dfc378f74d8eb8c59c6d34322488269ebfe7615b1
+==============================================================
+
+file             theorems   axiom-free       rest
+----             --------   ----------       ----
+Interchange           21           21          0
+MagicSquare           85           25         60
+Anyon                714          307        407
+Exchangeable          41           41          0
+Rigidity             214           59        155
+Verlinde              75           50         25
+TOTAL               1150          503        647
+
+axiom sets actually occurring:
+  Rigidity         [propext, Quot.sound]        124
+  Rigidity         [Quot.sound]                 1
+  Rigidity         [propext]                    30
+  Anyon            [propext]                    29
+  MagicSquare      [propext, Quot.sound]        5
+  MagicSquare      [propext]                    55
+  Verlinde         [propext, Quot.sound]        25
+  Anyon            [Quot.sound]                 8
+  Anyon            [propext, Quot.sound]        370
+
+THE TWO THAT MATTER:
+  sorryAx           0   (must be 0 -- this is the authoritative
+                        gap check; a `sorry` in any proof term
+                        appears here and cannot be hidden)
+  Classical.choice  0   (must be 0 -- the files are constructive)
+
+raw output kept in: /tmp/wsl_axioms_11607/raw.txt
+RESULT: census complete, hygiene clean.  PASS.

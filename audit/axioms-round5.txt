@@ -1,0 +1,44 @@
+==============================================================
+ AXIOM CENSUS -- #print axioms on every theorem
+ toolchain: leanprover/lean4:v4.32.0   Lean (version 4.32.0, x86_64-w64-windows-gnu, commit 8c9756b28d64dab099da31a4c09229a9e6a2ef35, Release)
+--------------------------------------------------------------
+ WHAT THIS COLUMN MEANS (round 4, at the builder's request):
+ the axioms of the #print axioms closure, STATEMENT INCLUDED --
+ a toolchain-relative OVER-APPROXIMATION of logical dependence.
+ A theorem may be derivable axiom-free and still report propext
+ here, because a definition named in its statement carries one.
+ This census measures the first thing, not the second.
+--------------------------------------------------------------
+ SOURCES MEASURED (E5(ii): every view names what it viewed).
+ Without these, an output is faithfully rendered and
+ unverifiably relevant -- D5's lesson one level up.
+   Interchange.lean     81feebe2b00b5162d17b07fb5577c77c4416e377a649279cc65bebdff9126e39
+   MagicSquare.lean     0f4d6185a6a70ceede7f309036dc8798ff351b8c34af1ba0f20b8e26fbf2aa16
+   Anyon.lean           df8c3b9dbc14f364bce82555e25126717b273583451b0d7e0c0eeea2d2fdff09
+   Exchangeable.lean    c7d845b5e14e4d2afcceb35ccd88022609c000617dd3af859334f326f4f4f50f
+   lean-toolchain       cc346fd7850a83fb7af3902dfc378f74d8eb8c59c6d34322488269ebfe7615b1
+==============================================================
+
+file             theorems   axiom-free       rest
+----             --------   ----------       ----
+Interchange           21           21          0
+MagicSquare           63           16         47
+Anyon                714          307        407
+Exchangeable          41           41          0
+TOTAL                839          385        454
+
+axiom sets actually occurring:
+  Anyon            [propext]                    29
+  MagicSquare      [propext, Quot.sound]        2
+  MagicSquare      [propext]                    45
+  Anyon            [Quot.sound]                 8
+  Anyon            [propext, Quot.sound]        370
+
+THE TWO THAT MATTER:
+  sorryAx           0   (must be 0 -- this is the authoritative
+                        gap check; a `sorry` in any proof term
+                        appears here and cannot be hidden)
+  Classical.choice  0   (must be 0 -- the files are constructive)
+
+raw output kept in: /tmp/wsl_axioms_1135/raw.txt
+RESULT: census complete, hygiene clean.  PASS.
