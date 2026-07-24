@@ -1,0 +1,72 @@
+THE WORKSHOP — WELD REPORT
+==========================================================================
+
+Bench 1 — ARENA: state spaces precipitate from relatings (GNS) [exact]
+  pure record : theater dim 2, mirror-cast (commutant) dim 1, Gram spectrum [1.0, 1.0]
+  mixed record: theater dim 4, mirror-cast (commutant) dim 4, Gram spectrum [0.5, 0.5, 0.5, 0.5]
+  barely-mixed record (p=0.05): theater dim 4, Gram spectrum [0.95, 0.95, 0.05, 0.05] — the extra directions are sediment-thin
+  moral: same algebra of relatings, different record -> different theater;
+         homomorphism, adjoints, cyclicity, and the record itself all
+         reproduced inside the precipitated arena. The stage is sediment.
+  [PASS] all self-checks green (0.7s)
+
+Bench 2 — SHEAF: local views everywhere, no global view (Mermin-Peres) [exact]
+  quantum side verified: 9 observables, 6 contexts, all commuting
+  within context; products = +1,+1,+1 (rows) and +1,+1,-1 (columns).
+  global valuations satisfying all 6 contexts: 0 of 512
+  maximum simultaneously satisfiable contexts: 5 of 6
+  moral: local sections everywhere, global section nowhere —
+         no view from the wings, checked exhaustively. The obstruction
+         to gluing is not ignorance; it is the content.
+  [PASS] all self-checks green (0.0s)
+
+Bench 3 — HABIT: law as sediment (Polya / de Finetti) [rigorous toy — risk budget]
+  habit hardening: median swing over one doubling of history —
+    young world (10->20 draws): 0.050   old world (750->1500): 0.007
+  each history congealed its own constant; the ensemble of constants vs
+  Uniform(0,1) — the exact de Finetti measure: KS deviation 0.009
+  precedent-world vs hidden-law-world, red-count law after 20 draws:
+    TV distance 0.022 (theory: identical — both exactly uniform;
+    urn vs exact uniform: 0.015)
+  precedent binds: histories opening >=8/10 red end at mean fraction 0.838
+    (posterior arithmetic predicts ~0.833; unconditioned mean: 0.503)
+  moral: the 'law' theta is nowhere in the mechanism — it is sediment.
+         'Hidden constant' and 'self-similar habit' are two descriptions
+         of one world; and young worlds are visibly sloppier than old ones.
+  [PASS] all self-checks green (1.9s)
+
+Bench 4 — FIXED POINT: things = invariants of coarse-graining (RG) + quine
+  1D exact decimation from K=2.0: 2 -> 1.65 -> 1.31 -> 0.964 -> 0.628 -> 0.32 -> 0.0962 -> ... -> 0.0e+00
+  2D Migdal-Kadanoff: nontrivial fixed point K* = 0.3047
+  (Onsager exact K_c = 0.4407 — the MK scheme is approximate, as labeled)
+  relevant eigenvalue lambda = 1.6786 -> nu = ln b / ln lambda = 1.338  (exact 2D: nu = 1)
+  watershed: K*+0.02 flows to strong coupling (order); K*-0.02 flows to 0.0e+00 (nothing)
+  — one relevant direction, two destinies, and the 'thing' here is the
+  universality class: the occupant washed out, the role remaining.
+  quine verified: a sentence equal to its own output when run —
+  the diagonal argument caught behaving as a fixed point, not a paradox.
+  [PASS] all self-checks green (0.0s)
+
+Bench 5 — INTERACTION: identity from relating alone (bisimulation) [exact]
+  anatomy vs identity: a 1-state loop and a 2-state loop — bisimilar: True
+  spectator's archive: trace sets equal: True  [('coin', 'coffee'), ('coin', 'tea')]
+  participant's test:  bisimilar: False — after the coin, machine 2 is in
+  a state that refuses one of the drinks; only interacting can find that out.
+  moral: identity = indistinguishability under every admissible relating;
+         and the relating sees strictly more than the record of outcomes.
+  [PASS] all self-checks green (0.0s)
+
+Bench 6 — CAST: the parts discovered from the play (mereology toy)
+  hidden cast: interaction weight eps^2 = 0.0225;
+  scrambled presentation: 0.3699 (16x worse — no parts in sight)
+  search over all factorizations: best interaction weight found = 0.0000 (planted: 0.0225)
+  records check: median entanglement of product states after t=0.4 —
+    discovered cut: 0.0000 bits   random cuts: 0.2459 bits
+  moral: the parts were not in the presentation; they were in the play.
+         The cast list is the cut that keeps composing — parts as
+         stabilizations, selected by their ability to hold records.
+  [PASS] all self-checks green (43.1s)
+
+==========================================================================
+floor check: every bench stood on one fixture — composition,
+the associative product. It held.

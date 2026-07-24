@@ -1,0 +1,56 @@
+==============================================================
+ THE WORKSHOP -> LEAN : COMPILE TRANSCRIPT
+==============================================================
+date        : 2026-07-21T06:54:40Z (UTC)
+host os     : MINGW64_NT-10.0-26200 3.6.9-b4195d69.x86_64 x86_64
+toolchain   : leanprover/lean4:v4.32.0
+lean        : Lean (version 4.32.0, x86_64-w64-windows-gnu, commit 8c9756b28d64dab099da31a4c09229a9e6a2ef35, Release)
+
+--------------------------------------------------------------
+ per-file: exit code, wall time, output bytes, .olean sha256
+--------------------------------------------------------------
+Interchange.lean   exit=0     1659 ms  stdout+stderr=0 bytes  olean=304712 bytes
+                   sha256(olean) = 7439cf99f388d3b266c875a70ba8d7c69e20e2d28b2d0234736d54f87a23b5fc
+
+MagicSquare.lean   exit=0    51082 ms  stdout+stderr=0 bytes  olean=9883616 bytes
+                   sha256(olean) = 0e04bccdeaaedc8c471d2321acda797f1e89ac75aca5aa809c9d0304a00bce47
+
+Anyon.lean         exit=0   102185 ms  stdout+stderr=0 bytes  olean=10836872 bytes
+                   sha256(olean) = 5bec0f8b1a4cad7a68c8992a116857a22b7ab6fbe0de9408e8d65e5249f4eee6
+
+Exchangeable.lean  exit=0    18219 ms  stdout+stderr=0 bytes  olean=828248 bytes
+                   sha256(olean) = a402def5655570cefa197fe9b939beae84f87ec30571172de42c7864a6085330
+
+--------------------------------------------------------------
+ hygiene sweep
+--------------------------------------------------------------
+  sorry            6 textual occurrence(s)
+      Interchange.lean:35:  Status: PROVED, no `sorry`.
+      MagicSquare.lean:21:  Status: PROVED, no `sorry`.  Theorem A is proved twice, independently:
+      Anyon.lean:10:  `sorry`, no mathlib.
+      Anyon.lean:37:  Status: PROVED throughout, no `sorry`, no unmarked gap.
+      Anyon.lean:4603:    Lean, not a Lean theorem.  It is a Lean theorem now, with no `sorry`, no
+      Exchangeable.lean:31:  Self-contained: NO imports.  No `sorry`, no `native_decide`, no `axiom`, no
+  native_decide    5 textual occurrence(s)
+      Interchange.lean:27:  case-split).  No `simp`, no `omega`, no `native_decide`.
+      MagicSquare.lean:17:  `native_decide`.  (An earlier header listed only the round-1 tactics
+      Anyon.lean:9:  Lean kernel on `Int`.  No floats, no rationals, no `native_decide`, no
+      Anyon.lean:4604:    `native_decide`, and no raised budget. -/
+      Exchangeable.lean:31:  Self-contained: NO imports.  No `sorry`, no `native_decide`, no `axiom`, no
+  maxHeartbeats    0 textual occurrence(s)
+  maxRecDepth      0 textual occurrence(s)
+  partial def      0 textual occurrence(s)
+  ^axiom           0  (must be 0)
+  ^import          0  (must be 0)
+
+--------------------------------------------------------------
+ theorem counts
+--------------------------------------------------------------
+  Interchange.lean      21
+  MagicSquare.lean      63
+  Anyon.lean           565
+  Exchangeable.lean     41
+  TOTAL                690
+
+RESULT: all files compiled silent (exit 0, zero bytes).  PASS.
+artifacts kept in: /tmp/wsl_transcript_105

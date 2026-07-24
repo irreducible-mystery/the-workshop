@@ -1,0 +1,165 @@
+THE WORKSHOP — WELD REPORT
+==========================================================================
+
+Bench 1 — ARENA: state spaces precipitate from relatings (GNS) [exact]
+  pure record : theater dim 2, mirror-cast (commutant) dim 1, Gram spectrum [1.0, 1.0]
+  mixed record: theater dim 4, mirror-cast (commutant) dim 4, Gram spectrum [0.5, 0.5, 0.5, 0.5]
+  barely-mixed record (p=0.05): theater dim 4, Gram spectrum [0.95, 0.95, 0.05, 0.05] — the extra directions are sediment-thin
+  moral: same algebra of relatings, different record -> different theater;
+         homomorphism, adjoints, cyclicity, and the record itself all
+         reproduced inside the precipitated arena. The stage is sediment.
+  [PASS] all self-checks green (0.2s)
+
+Bench 2 — SHEAF: local views everywhere, no global view (Mermin-Peres) [exact]
+  quantum side verified: 9 observables, 6 contexts, all commuting
+  within context; products = +1,+1,+1 (rows) and +1,+1,-1 (columns).
+  global valuations satisfying all 6 contexts: 0 of 512
+  maximum simultaneously satisfiable contexts: 5 of 6
+  moral: local sections everywhere, global section nowhere —
+         no view from the wings, checked exhaustively. The obstruction
+         to gluing is not ignorance; it is the content.
+  [PASS] all self-checks green (0.0s)
+
+Bench 3 — HABIT: law as sediment (Polya / de Finetti) [rigorous toy — risk budget]
+  habit hardening: median swing over one doubling of history —
+    young world (10->20 draws): 0.050   old world (750->1500): 0.007
+  each history congealed its own constant; the ensemble of constants vs
+  Uniform(0,1) — the exact de Finetti measure: KS deviation 0.009
+  precedent-world vs hidden-law-world, red-count law after 20 draws:
+    TV distance 0.022 (theory: identical — both exactly uniform;
+    urn vs exact uniform: 0.015)
+  precedent binds: histories opening >=8/10 red end at mean fraction 0.838
+    (posterior arithmetic predicts ~0.833; unconditioned mean: 0.503)
+  moral: the 'law' theta is nowhere in the mechanism — it is sediment.
+         'Hidden constant' and 'self-similar habit' are two descriptions
+         of one world; and young worlds are visibly sloppier than old ones.
+  [PASS] all self-checks green (1.7s)
+
+Bench 4 — FIXED POINT: things = invariants of coarse-graining (RG) + quine
+  1D exact decimation from K=2.0: 2 -> 1.65 -> 1.31 -> 0.964 -> 0.628 -> 0.32 -> 0.0962 -> ... -> 0.0e+00
+  2D Migdal-Kadanoff: nontrivial fixed point K* = 0.3047
+  (Onsager exact K_c = 0.4407 — the MK scheme is approximate, as labeled)
+  relevant eigenvalue lambda = 1.6786 -> nu = ln b / ln lambda = 1.338  (exact 2D: nu = 1)
+  watershed: K*+0.02 flows to strong coupling (order); K*-0.02 flows to 0.0e+00 (nothing)
+  — one relevant direction, two destinies, and the 'thing' here is the
+  universality class: the occupant washed out, the role remaining.
+  quine verified: a sentence equal to its own output when run —
+  the diagonal argument caught behaving as a fixed point, not a paradox.
+  [PASS] all self-checks green (0.0s)
+
+Bench 5 — INTERACTION: identity from relating alone (bisimulation) [exact]
+  anatomy vs identity: a 1-state loop and a 2-state loop — bisimilar: True
+  spectator's archive: trace sets equal: True  [('coin', 'coffee'), ('coin', 'tea')]
+  participant's test:  bisimilar: False — after the coin, machine 2 is in
+  a state that refuses one of the drinks; only interacting can find that out.
+  moral: identity = indistinguishability under every admissible relating;
+         and the relating sees strictly more than the record of outcomes.
+  [PASS] all self-checks green (0.0s)
+
+Bench 6 — CAST: the parts discovered from the play (mereology toy)
+  hidden cast: interaction weight eps^2 = 0.0225;
+  scrambled presentation: 0.3699 (16x worse — no parts in sight)
+  search over all factorizations: best interaction weight found = 0.0000 (planted: 0.0225)
+  records check: median entanglement of product states after t=0.4 —
+    discovered cut: 0.0000 bits   random cuts: 0.2459 bits
+  moral: the parts were not in the presentation; they were in the play.
+         The cast list is the cut that keeps composing — parts as
+         stabilizations, selected by their ability to hold records.
+  [PASS] all self-checks green (40.6s)
+
+Bench 2 DEEPENED — COHOMOLOGY: the obstruction priced, the game won [exact]
+  linear system over GF(2): rank M = 5, rank [M|b] = 6 -> UNSOLVABLE
+  obstruction group coker(M) ≅ Z_2^1 = Z_2; class of b = the nonzero element
+  witnessing cocycle y = (1,1,1,1,1,1): y·M = 0 and y·b = 1 —
+  the fundamental cycle of the cover evaluates the twist to 1;
+  no coboundary reaches it. The obstruction has an address.
+  every deterministic script (64 x 64, exhausted): best = 8/9
+  performance: exact Born success = 1.0 on all 9 questions: True
+  sampled rounds: 9999 played, 0 failures
+  moral: the missing global section is measured, not mourned — the
+         class in coker(M) prices it, and the performance banks the
+         difference: 8/9 is the ceiling for scripts; the play scores 1.
+  [PASS] all self-checks green (0.0s)
+
+Bench 3 DEEPENED — CHANNELS: quantum de Finetti — law = shareability [exact miniature]
+  law emerging: T(n) = dist(2-qubit habit, best i.i.d.-mixture):
+    n=8: 7.14e-02  n=16: 3.33e-02  n=32: 1.61e-02  n=64: 7.94e-03
+    measured: T(n) = 1/(2(n-1)) exactly; log-log slope = -1.017
+    (quantum de Finetti bound ~16/n respected at every n)
+  the unshareable: singlet is swap-invariant, pure, and entangled
+    (partial-transpose eigenvalue -0.500 < 0) — purity forces any
+    3-party extension to decouple, so no symmetric extension exists:
+    a habit that cannot be shared, and therefore never becomes a law.
+  moral: law = unlimited shareability of the habit (de Finetti);
+         monogamy marks the lawless — the unshareable indexical.
+         The urn was the classical case; this is the quantum one.
+  [PASS] all self-checks green (0.1s)
+
+Bench 7 — GRAMMAR CORNERSTONE: no-cloning from naturality alone [exact; bench stays open]
+  cartesian grammar: Delta(x) = (x,x) natural for 200 random
+  functions between random finite sets — copying is a theorem there.
+  tensor grammar: naturality constraints stacked for f in
+  {2I, X, Z, H, random} -> solution space dimension = 0
+  (the scalar test alone: f = 2I forces 2*Delta = 4*Delta, so Delta = 0)
+  moral: no-cloning before dynamics — the impossibility of copying is
+         written into the tensor grammar itself, exactly where the
+         cartesian grammar writes copying in. The classical/quantum
+         line is drawn by composition before physics arrives.
+  status: cornerstone laid; the bench stays open. The rebuild —
+          every equality replaced by a witnessed identification —
+          is the long work, and it is not faked here.
+  [PASS] all self-checks green (0.0s)
+
+Bench 3 STRETCHED — PROCESS: de Finetti for the play itself [exact + verified]
+  exact (no floats): all 2^8 = 256 paths, probabilities in rational arithmetic,
+    fall into 37 transition-count classes; within every class the
+    probabilities are IDENTICAL — Markov exchangeability, verified exactly.
+    (Diaconis–Freedman then applies: the process = a mixture of Markov chains.)
+  each history congeals its own channel: median swing of the 0->1
+    transition habit — young world: 0.048   old world: 0.008
+    congealed theta_0 vs Uniform(0,1): KS deviation 0.014
+    congealed theta_1 vs Uniform(0,1): KS deviation 0.012
+    independence across rows: corr(theta_0, theta_1) = -0.010
+    -> the de Finetti measure over DYNAMICS: uniform per row, independent rows.
+  the mirage, for dynamics: reinforced world vs hidden-channel world,
+    law of the 0->1 count in 20 steps: TV distance 0.009 (theory: identical)
+  moral: the script of the dynamics is sediment too. A process that
+         only ever repeats itself IS, exactly, a mixture of memoryless
+         laws — habit-of-process and hidden-law-of-process are one
+         world twice described. The play's law is its own precedent.
+  [PASS] all self-checks green (2.6s)
+
+Bench 2 STRETCHED — THE DIAL: contextual fraction, obstruction graded [exact LP]
+  square: contextual fraction CF = 1.000000 — maximal; no fraction
+    of the model is scripted. (The Z_2 address, now priced at 1.)
+  the dial: mix with uniform noise, CF(eps) computed by LP:
+    eps=0.00: 1.0000   eps=0.05: 0.8500   eps=0.10: 0.7000   eps=0.20: 0.4000   eps=0.33: 0.0000   eps=0.40: 0.0000
+    exact law recovered: CF(eps) = 1 - 3*eps, dead at eps = 1/3 —
+    the square's contextuality is worth exactly three times its noise.
+  pentagon built: adjacent projectors orthogonal (checked); p_i = 0.4472 each,
+    sum p_i = 2.2361 = sqrt(5) (classical ceiling 2, algebraic 5/2)
+  pentagon: CF = 0.472136; closed form 2*sqrt(5) - 4 = 0.472136
+  moral: the obstruction is now a gauge, not a verdict — address
+         (Z_2 class), then price (CF = 1), now a dial (0.472, and a
+         death at eps = 1/3). Graded resource, exactly measured.
+  [PASS] all self-checks green (0.2s)
+
+Bench 7, SECOND STONE — witnessed identity has curvature [exact]
+  octant loop |0> -> |+> -> |+i> -> |0>: strict grammar reports
+  'same ray, same ray, same ray'; witnessed grammar composes the
+  witnesses and gets e^(i pi/4): loop witness = 0.785398 = pi/4 exactly.
+  curvature: loop witness = +/- (solid angle)/2 — l'Huilier check on
+  30 random Bloch triangles, worst deviation 1.33e-14
+  reversing the loop conjugates the witness (checked): orientation is real.
+  torsor: identifying |0> with |+> directly vs via |+i> — the two
+  witnesses disagree by exactly the loop witness (0.785398 = pi/4).
+  moral: identity, made proof-relevant, secretes curvature. The
+         geometric phase is what the equals sign was erasing —
+         Pancharatnam measured it (1956) before Berry derived it (1984).
+  status: second stone laid; the bench stays open — coherence all the
+          way up (associators, interchange, the full rebuild) remains.
+  [PASS] all self-checks green (0.0s)
+
+==========================================================================
+floor check: every bench stood on one fixture — composition,
+the associative product. It held.
